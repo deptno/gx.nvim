@@ -1,4 +1,4 @@
-local parse_repository = require("custom/lib/parse_repository")
+local parse_repository = require("gx/lib/parse_repository")
 
 local get_git_remote_info = function(cwd)
   local command = type(cwd) == "string" and string.format("git -C %s remote -v | head -1 | awk '{print $2}'", cwd)
