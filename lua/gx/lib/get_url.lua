@@ -2,7 +2,7 @@
 ---@param input string
 ---@return string|nil
 local get_url = function(input)
-  local pattern = ".*(https?://[%w-_%.%?%.:/%+=&]+).*"
+  local pattern = ".*(https?://%S+).*"
 
   return input:match(pattern)
 end
